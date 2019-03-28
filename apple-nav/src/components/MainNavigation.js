@@ -1,8 +1,16 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+import NavigationContainer from './NavigationStyles'
 
 const MainNavigation = props => {
+  const { data } = props
   return (
-    <div>Hello</div>
+    <NavigationContainer>
+      {data.map(category => (
+        <NavLink key={category.name} to={category.path}>{category.name}</NavLink>
+      ))}
+    </NavigationContainer>
   )
 }
 
