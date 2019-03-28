@@ -1,14 +1,14 @@
 const theme = {
   color: {
-    primaryColor: '#333',
-    primaryDark: '#0F5080',
-    primaryBgShading: '#F1F1F1',
+    primaryColor: '#2D2D2D',
+    primaryDark: '#222222',
+    primaryBgShading: '#B5B5B5',
     secondaryColor: '#4195D2',
     secondaryBgShading: '#7F969F',
     accent: '#ED5D28',
-    emphasis: '#03100D',
+    emphasis: '#FFF',
     darkText: '#333',
-    lightText: '#FFF',
+    lightText: '#FEFEFE',
     danger: 'red'
   },
 
@@ -23,13 +23,13 @@ const theme = {
     defaultLinkColor: () => { return theme.color.secondaryColor },
     containerBgColor: () => { return theme.primaryBgShading },
     cardBgColor: () => { return theme.secondaryBgShading },
-    defaultBorderColor: 'lightgray'
+    defaultBorderColor: () => { return theme.color.lightText }
   },
 
   fontStyles: {
-    logoFont: "Didot, serif",
-    headingFont: "Didot, serif",
-    defaultFont: "'PT Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif"
+    logoFont: "'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif",
+    headingFont: "'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif",
+    defaultFont: "'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, sans-serif"
   },
 
   fontSizing: { // Based on CSS default font-resizing of 62.5%
