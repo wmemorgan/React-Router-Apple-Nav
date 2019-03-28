@@ -2,14 +2,15 @@ const theme = {
   color: {
     primaryColor: '#2D2D2D',
     primaryDark: '#222222',
-    primaryBgShading: '#B5B5B5',
+    primaryBgShading: '#F6F6F6',
     secondaryColor: '#4195D2',
-    secondaryBgShading: '#7F969F',
+    secondaryBgShading: '#B5B5B5',
     accent: '#ED5D28',
     emphasis: '#FFF',
     darkText: '#333',
-    lightText: '#FEFEFE',
+    lightText: '#F6F6F6',
     danger: 'red'
+    
   },
 
   colorScheme: {
@@ -23,7 +24,7 @@ const theme = {
     defaultLinkColor: () => { return theme.color.secondaryColor },
     containerBgColor: () => { return theme.primaryBgShading },
     cardBgColor: () => { return theme.secondaryBgShading },
-    defaultBorderColor: () => { return theme.color.lightText }
+    defaultBorderColor: () => { return theme.color.secondaryBgShading }
   },
 
   fontStyles: {

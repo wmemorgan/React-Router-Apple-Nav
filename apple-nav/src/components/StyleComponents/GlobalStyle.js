@@ -22,7 +22,6 @@ body * {
 
 body {
   color: ${color.lightText};
-  background: ${color.primaryBgShading};
   font-family: ${fontStyles.defaultFont}  
 }
 
