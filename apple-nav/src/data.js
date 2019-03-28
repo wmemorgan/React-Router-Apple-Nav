@@ -1,11 +1,11 @@
 const menu = [
-  {
-    name: 'Logo',
-    path: '/',
-    subMenu: [],
-    isCollapsable: false,
-    icon: 'https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/apple/image_large.svg'
-  },
+  // {
+  //   name: 'Logo',
+  //   path: '/',
+  //   subMenu: [],
+  //   isCollapsable: false,
+  //   icon: 'https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/apple/image_large.svg'
+  // },
   {
     name: 'Mac',
     path: '/mac',
