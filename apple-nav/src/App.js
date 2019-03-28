@@ -3,9 +3,10 @@ import { Route } from 'react-router-dom'
 
 import AppContainer from './components/StyleComponents/AppStyles'
 import Header from './components/Header'
+import Home from './components/Home'
+import SubNavigation from './components/SubNavigation'
 
 import menuData from './data'
-import SubNavigation from './components/SubNavigation';
 
 class App extends Component {
   constructor() {
@@ -24,6 +25,7 @@ class App extends Component {
     return (
       <AppContainer>
         <Header data={data} />
+        <Route exact path="/" component={Home}/>
         {data.map(category => (
           <Route key={category.name} path={category.path} 
             render={props => <SubNavigation {...props} category={category} />}
