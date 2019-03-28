@@ -9,7 +9,11 @@ const MainNavigation = props => {
   return (
     <NavigationContainer>
       {data.map(category => (
-        <NavLink key={category.name} to={category.path}>
+        <NavLink 
+          key={category.name} 
+          to={category.path}
+          activeClassName="activeSelection"
+        >
           {category.name}
         </NavLink>
       ))}

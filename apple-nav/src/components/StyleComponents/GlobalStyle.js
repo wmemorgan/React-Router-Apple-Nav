@@ -64,6 +64,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+a.activeSelection {
+  color: ${color.secondaryBgShading};
+}
+
 `
 
 export default GlobalStyle
