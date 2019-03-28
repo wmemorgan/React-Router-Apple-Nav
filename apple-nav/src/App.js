@@ -5,6 +5,7 @@ import AppContainer from './components/StyleComponents/AppStyles'
 import Header from './components/Header'
 
 import menuData from './data'
+import SubNavigation from './components/SubNavigation';
 
 class App extends Component {
   constructor() {
@@ -22,10 +23,13 @@ class App extends Component {
     const { data } = this.state
     return (
       <AppContainer>
+        <Header data={data} />
         {data.map(category => (
-          <Route key={category.name} path={category.path} />
+          <Route key={category.name} path={category.path} 
+            render={props => <SubNavigation {...props} category={category} />}
+          />
         ))}
-        <Header data={data}/>
+        
       </AppContainer>
     )
   }
