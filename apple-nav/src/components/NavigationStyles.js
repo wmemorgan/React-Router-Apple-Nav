@@ -6,6 +6,7 @@ const NavigationContainer = styled.nav`
   max-width: 1000px;
   ${flex('row', 'center', 'space-between')};
   font-size: ${fontSizing.s};
+
   @media ${breakpoints[0]} {
     ${flex('column','center','center')}
   }

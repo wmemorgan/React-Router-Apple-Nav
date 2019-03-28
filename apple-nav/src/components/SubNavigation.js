@@ -8,14 +8,14 @@ const SubNavigation = props => {
   return (
     <SubNavigationContainer>
       {category.subMenu.map(item => (
-          <MenuOption>
-            <NavLink key={item.name} to={item.path}>
-              <ImageContainer>
-                <img src={item.icon} alt="" />
-              </ImageContainer>
-              <div>{item.name}</div>
-            </NavLink>
-          </MenuOption>  
+        <MenuOption key={item.name}>
+          <NavLink to={item.path}>
+            <ImageContainer>
+              <img src={item.icon} alt="" />
+            </ImageContainer>
+            <div>{item.name}</div>
+          </NavLink>
+        </MenuOption>  
         ))
       }
     </SubNavigationContainer>
