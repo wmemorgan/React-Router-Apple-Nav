@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 
 import AppContainer from './components/StyleComponents/AppStyles'
 import Header from './components/Header'
@@ -18,9 +19,13 @@ class App extends Component {
   }
 
   render() {
+    const { data } = this.state
     return (
       <AppContainer>
-        <Header data={this.state.data}/>
+        {data.map(category => (
+          <Route key={category.name} path={category.path} />
+        ))}
+        <Header data={data}/>
       </AppContainer>
     )
   }
