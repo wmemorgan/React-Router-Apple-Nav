@@ -2,14 +2,14 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { MobileNavigationContainer, ProductMenuMobile } from './NavigationStyles'
-import SearchBar from './StyleComponents/SearchBar'
+import SearchBarMobile from './StyleComponents/SearchBarMobile'
 
 const MobileNavigation = props => {
   const { data } = props
   return (
-    <MobileNavigationContainer>
-      <SearchBar show />
-      <ProductMenuMobile>
+    <MobileNavigationContainer {...props}>
+      <SearchBarMobile {...props} />
+      <ProductMenuMobile {...props}>
         {data.map(category => (
           <NavLink
             key={category.name}

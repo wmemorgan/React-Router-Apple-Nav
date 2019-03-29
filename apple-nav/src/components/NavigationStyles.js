@@ -17,7 +17,7 @@ export const NavigationContainer = styled.nav`
 
 export const ProductMenu = styled.div`
   width: 70%;
-  display: ${props => props.hide ? 'none' : 'flex'};
+  display: ${props => !props.toggle ? 'flex' : 'none'};
   align-items: center;
   justify-content: space-between;
 
@@ -28,24 +28,29 @@ export const ProductMenu = styled.div`
 
 export const MobileNavigationContainer = styled.nav`
   display: none;
+
   @media ${breakpoints[1]} {
     width: 100%;
-    height: 100vh;
-    ${flex('column', 'center', 'center')};
+    
+    display: ${props => props.show ? 'none' : 'flex'};
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 200px;
     position: fixed;
     z-index: 5;
     
     font-size: ${fontSizing.sm};
     background: #000000;
-  }
-}`
+}
+`
 
 export const ProductMenuMobile = styled.div`
 
     @media ${breakpoints[1]} {
       width: 70%;
-      ${flex('column')};
+      display: ${props => !props.toggle ? 'none': 'flex'};
+      flex-direction: column;
 
       a {
         width: 100%;

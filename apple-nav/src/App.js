@@ -8,6 +8,7 @@ import Shop from './components/Shop'
 import Search from './components/Search'
 import SubNavigation from './components/SubNavigation'
 
+
 import { menu, shop, search } from './data'
 
 class App extends Component {
@@ -17,7 +18,8 @@ class App extends Component {
       data: [],
       shopData: [],
       searchData: [],
-      supportData: []
+      supportData: [],
+      toggle: false
     }
   }
 
@@ -25,15 +27,29 @@ class App extends Component {
     this.setState({
       data: menu,
       shopData: shop,
-      searchData: search
+      searchData: search,
+      toggle: false
     })
+  }
+
+  toggleDisplay = () => {
+    console.log(`clicked toggleDisplay!!`)
+    this.setState(prevState => (
+      { toggle: !prevState.toggle
+      }
+    ))
   }
 
   render() {
     const { data, shopData, searchData } = this.state
+
     return (
       <AppContainer>
-        <Header data={data} />
+        <Header 
+          data={data} 
+          toggle={this.state.toggle}
+          toggleDisplay={this.toggleDisplay}
+        />
         <Route exact path="/" component={Home}/>
         {data.map(category => (
           <Route key={category.name} path={category.path} 

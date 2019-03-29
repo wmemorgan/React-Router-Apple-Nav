@@ -2,7 +2,11 @@ import styled, { css } from 'styled-components'
 import { fontSizing, flex, breakpoints } from './theme'
 
 const ShopIcon = styled.div`
+@media ${breakpoints[2]} {
+    display: ${props => !props.toggle ? 'flex' : 'none'};
     z-index: 10;
+} 
+
     font-family: ${props => props.theme.fontStyles.logoFont};
     font-size: ${props => props.theme.fontSizing.l};
     font-weight: bold;
