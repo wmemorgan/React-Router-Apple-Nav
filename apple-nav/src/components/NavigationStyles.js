@@ -2,14 +2,15 @@ import styled from 'styled-components'
 import { color, colorScheme, fontSizing, flex, breakpoints } from './StyleComponents/theme'
 
 export const NavigationContainer = styled.nav`
-border: 1px solid green;
   width: 90%;
   max-width: 1000px;
   ${flex('row', 'center', 'space-evenly')};
   font-size: ${fontSizing.s};
 
   @media ${breakpoints[1]} {
-    ${flex('column','center','center')}
+    ${flex('row','center','space-between')}
+    width: 97%;
+    
   }
 
 `
@@ -19,11 +20,40 @@ export const ProductMenu = styled.div`
   ${flex('row', 'center', 'space-between')};
 
     @media ${breakpoints[1]} {
-      ${flex('column', 'normal', 'center')}
+      display: none;
+  }
+`
+
+export const MobileNavigationContainer = styled.nav`
+  display: none;
+  @media ${breakpoints[1]} {
+    width: 100%;
+    height: 100vh;
+    ${flex('column', 'center', 'center')};
+    margin-top: 200px;
+    position: fixed;
+    z-index: 5;
+    
+    font-size: ${fontSizing.sm};
+    background: #000000;
+  }
+}`
+
+export const ProductMenuMobile = styled.div`
+
+    @media ${breakpoints[1]} {
+      width: 70%;
+      ${flex('column')};
+      margin-top: 100px;
 
       a {
-        padding: 10px;
-        border: 1px solid ${colorScheme.defaultBorderColor};
+        width: 100%;
+        padding: 15px 0;
+        border-top: 1px solid ${colorScheme.defaultBorderColor};
+      }
+
+      a:first-child {
+        border-top: none;
       }
   }
 `
