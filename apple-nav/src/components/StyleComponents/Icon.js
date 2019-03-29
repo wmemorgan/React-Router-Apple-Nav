@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { flex } from './theme'
 
-const Logo = styled.div`
+const Icon = styled.div`
     font-family: ${props => props.theme.fontStyles.logoFont};
     font-size: ${props => props.theme.fontSizing.l};
     font-weight: bold;
@@ -16,4 +16,4 @@ const Logo = styled.div`
     }
 `
 
-export default Logo
+export default Icon
