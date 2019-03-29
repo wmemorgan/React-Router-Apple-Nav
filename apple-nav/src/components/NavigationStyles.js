@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { color, colorScheme, fontSizing, flex, breakpoints } from './StyleComponents/theme'
 
 export const NavigationContainer = styled.nav`
@@ -67,15 +67,21 @@ export const ProductMenuMobile = styled.div`
 export const SubNavigationContainer = styled.nav`
   width: 100%;
   ${flex('column','center','center')}
-  padding: 20px;
-  background: ${color.primaryBgShading};
+  padding: 10px;
+  background: ${props => props.darkmode ? color.primaryDark : color.primaryBgShading};
   font-size: ${fontSizing.s};
+
+  ${props =>
+    props.lightmode &&
+    css`
+      background: white;
+  `}
 `
 
 export const MenuContainer = styled.div`
   width: 100%;
   max-width: 1000px;
-  ${flex('row', 'center', 'space-evenly')};
+  ${flex('row', 'flex-start', 'space-evenly')};
 
   @media ${breakpoints[0]} {
     ${flex('column', 'center', 'center')}
@@ -83,11 +89,11 @@ export const MenuContainer = styled.div`
 `
 
 export const MenuOption = styled.div`
-  ${flex('column','center','center')};
+  
   text-align: center;
 
   & * {
-    color: ${color.primaryColor};
+    color: ${props => props.darkmode ? color.lightText : color.primaryColor};
     font-size: ${fontSizing.xs};
     text-decoration: none;
   }
@@ -98,6 +104,7 @@ export const ImageContainer = styled.div`
   width: 54px;  
   height: 54px;
   margin: 0 auto;
+  margin-bottom: 5px;
 
   img {
     width: 100%;
@@ -105,6 +112,11 @@ export const ImageContainer = styled.div`
   }
 `
 
+export const NewItem = styled.div`
+  margin: 10px 0;
+  color: ${color.danger};
+  font-size: ${fontSizing.xxs};
+`
 
 
 export default NavigationContainer

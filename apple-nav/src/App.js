@@ -53,7 +53,13 @@ class App extends Component {
         <Route exact path="/" component={Home}/>
         {data.map(category => (
           <Route key={category.name} path={category.path} 
-            render={props => <SubNavigation {...props} category={category} />}
+            render={props => 
+              <SubNavigation 
+                {...props} 
+                category={category} 
+                darkmode={category.name === 'TV'}
+                lightmode={category.name === 'Watch'}
+              />}
           />
         ))}
         <Route 
