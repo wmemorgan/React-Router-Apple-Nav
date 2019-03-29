@@ -2,11 +2,13 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { MobileNavigationContainer, ProductMenuMobile } from './NavigationStyles'
+import SearchBar from './StyleComponents/SearchBar'
 
 const MobileNavigation = props => {
   const { data } = props
   return (
     <MobileNavigationContainer>
+      <SearchBar show />
       <ProductMenuMobile>
         {data.map(category => (
           <NavLink

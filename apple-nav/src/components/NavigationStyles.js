@@ -17,9 +17,11 @@ export const NavigationContainer = styled.nav`
 
 export const ProductMenu = styled.div`
   width: 70%;
-  ${flex('row', 'center', 'space-between')};
+  display: ${props => props.hide ? 'none' : 'flex'};
+  align-items: center;
+  justify-content: space-between;
 
-    @media ${breakpoints[1]} {
+  @media ${breakpoints[1]} {
       display: none;
   }
 `
@@ -44,7 +46,6 @@ export const ProductMenuMobile = styled.div`
     @media ${breakpoints[1]} {
       width: 70%;
       ${flex('column')};
-      margin-top: 100px;
 
       a {
         width: 100%;

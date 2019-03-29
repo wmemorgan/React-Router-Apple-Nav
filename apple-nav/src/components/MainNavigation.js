@@ -6,6 +6,7 @@ import Logo from './StyleComponents/Logo'
 import { SearchIcon } from './StyleComponents/SearchStyles'
 import ShopIcon from './StyleComponents/ShopIcon'
 import MobileMenuIcon from './StyleComponents/MobileMenuIcon'
+import SearchBar from './StyleComponents/SearchBar'
 
 const MainNavigation = props => {
   const { data } = props
@@ -19,17 +20,18 @@ const MainNavigation = props => {
           <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/apple/image_large.svg" alt="Apple Logo" />
         </NavLink>
       </Logo>
-      <ProductMenu>
+      <ProductMenu >
         {data.map(category => (
-          <NavLink 
-            key={category.name} 
+          <NavLink
+            key={category.name}
             to={category.path}
             activeClassName="activeSelection"
           >
             {category.name}
           </NavLink>
         ))}
-      </ProductMenu>
+      </ProductMenu>     
+      <SearchBar />
       <SearchIcon>
         <NavLink to="/search">
           <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg" alt="" />
@@ -45,3 +47,19 @@ const MainNavigation = props => {
 }
 
 export default MainNavigation
+
+/*
+      <ProductMenu>
+        {data.map(category => (
+          <NavLink
+            key={category.name}
+            to={category.path}
+            activeClassName="activeSelection"
+          >
+            {category.name}
+          </NavLink>
+        ))}
+      </ProductMenu>
+
+
+*/
