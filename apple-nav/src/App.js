@@ -5,9 +5,10 @@ import AppContainer from './components/StyleComponents/AppStyles'
 import Header from './components/Header'
 import Home from './components/Home'
 import Shop from './components/Shop'
+import Search from './components/Search'
 import SubNavigation from './components/SubNavigation'
 
-import { menu, shop } from './data'
+import { menu, shop, search } from './data'
 
 class App extends Component {
   constructor() {
@@ -15,6 +16,7 @@ class App extends Component {
     this.state = {
       data: [],
       shopData: [],
+      searchData: [],
       supportData: []
     }
   }
@@ -22,12 +24,13 @@ class App extends Component {
   componentDidMount() {
     this.setState({
       data: menu,
-      shopData: shop
+      shopData: shop,
+      searchData: search
     })
   }
 
   render() {
-    const { data, shopData } = this.state
+    const { data, shopData, searchData } = this.state
     return (
       <AppContainer>
         <Header data={data} />
@@ -40,6 +43,10 @@ class App extends Component {
         <Route 
           path="/shop"
           render={props => <Shop {...props} category={shopData[0]} />} 
+        />
+        <Route 
+          path="/search"
+          render={props => <Search {...props} category={searchData[0]} />} 
         />
       </AppContainer>
     )

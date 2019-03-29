@@ -383,12 +383,6 @@ export const menu = [
   {
     name: 'Support',
     path: '/support',
-    subMenu: [],
-    isCollapsable: true
-  },
-  {
-    name: 'Search',
-    path: '/search',
     subMenu: [
       {
         name: 'Apple ID Account Page',
@@ -420,6 +414,46 @@ export const menu = [
         path: '/contact',
         isNew: false,
       },
+    ],
+    isCollapsable: true
+  },
+]
+
+export const search = [
+  {
+    name: 'Search',
+    path: '/search',
+    subMenu: [
+      {
+        name: 'Find a Store',
+        icon: '',
+        path: '/retail',
+        isNew: false,
+      },
+      {
+        name: 'Today at Apple',
+        icon: '',
+        path: '/today',
+        isNew: false,
+      },
+      {
+        name: 'Accessories',
+        icon: '',
+        path: '/apple_accessories',
+        isNew: false,
+      },
+      {
+        name: 'AirPods',
+        icon: '',
+        path: '/airpods',
+        isNew: false,
+      },
+      {
+        name: 'iPod',
+        icon: '',
+        path: '/ipod',
+        isNew: false,
+      }
     ],
     isCollapsable: false,
     icon: 'https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg'

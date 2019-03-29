@@ -24,6 +24,11 @@ const MainNavigation = props => {
         </NavLink>
       ))}
       <Icon>
+        <NavLink to="/search">
+          <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg" alt="" />
+        </NavLink>
+      </Icon>
+      <Icon>
         <NavLink to="/shop">
           <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/bag/image_large.svg" alt="" />
         </NavLink>
