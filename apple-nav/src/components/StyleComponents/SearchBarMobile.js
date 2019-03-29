@@ -1,13 +1,10 @@
 /* Search bar component */
 import React from 'react';
-// import { NavLink } from 'react-router-dom'
 
 // Styled components
 import { SearchIconOff, SearchFieldContainerMobile } from './SearchStyles'
 
 const SearchBar = (props) => {
-  console.log(props)
-  
   return (
     <SearchFieldContainerMobile {...props}>
       <SearchIconOff>

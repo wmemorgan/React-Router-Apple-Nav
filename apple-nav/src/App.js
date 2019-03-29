@@ -32,8 +32,8 @@ class App extends Component {
     })
   }
 
+  // Open and close specific navigation elements
   toggleDisplay = () => {
-    console.log(`clicked toggleDisplay!!`)
     this.setState(prevState => (
       { toggle: !prevState.toggle
       }
@@ -50,7 +50,9 @@ class App extends Component {
           toggle={this.state.toggle}
           toggleDisplay={this.toggleDisplay}
         />
+        {/* Define routes */}
         <Route exact path="/" component={Home}/>
+        {/* Define routes to menu items */}
         {data.map(category => (
           <Route key={category.name} path={category.path} 
             render={props => 
@@ -62,6 +64,7 @@ class App extends Component {
               />}
           />
         ))}
+
         <Route 
           path="/shop"
           render={props => <Shop {...props} category={shopData[0]} />} 
