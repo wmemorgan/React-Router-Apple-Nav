@@ -47,8 +47,8 @@ const theme = {
 
   breakpoints: [
     '(max-width: 600px)',
-    '(min-width: 768px)',
-    '(min-width: 801px)'
+    '(max-width: 768px)',
+    '(min-width: 769px)'
   ],
   // for media queries -- express them as @media ${theme.breakpoints[0]} {styles here}
   // in the arr, the first is for mobile, second is for portrait tablet, third is for desktop
