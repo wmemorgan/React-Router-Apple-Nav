@@ -1,11 +1,4 @@
-const menu = [
-  // {
-  //   name: 'Logo',
-  //   path: '/',
-  //   subMenu: [],
-  //   isCollapsable: false,
-  //   icon: 'https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/apple/image_large.svg'
-  // },
+export const menu = [
   {
     name: 'Mac',
     path: '/mac',
@@ -431,6 +424,9 @@ const menu = [
     isCollapsable: false,
     icon: 'https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg'
   },
+]
+
+export const shop = [
   {
     name: 'Shop',
     path: '/shop',
@@ -469,7 +465,6 @@ const menu = [
     isCollapsable: false,
     icon: 'https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/bag/image_large.svg'
   }
-
 ]
 
 export default menu
