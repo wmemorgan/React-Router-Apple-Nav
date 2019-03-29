@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { flex } from './theme'
+import { flex, breakpoints } from './theme'
 
 const Icon = styled.div`
     font-family: ${props => props.theme.fontStyles.logoFont};
@@ -14,6 +14,11 @@ const Icon = styled.div`
     a {
       ${flex('column', 'flex-end', 'center')};
     }
+
+    @media ${breakpoints[1]} {
+      display: none;
+    }
+    
 `
 
 export default Icon
