@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import NavigationContainer from './NavigationStyles'
 import Logo from './StyleComponents/Logo'
+import Icon from './StyleComponents/Icon'
 
 const MainNavigation = props => {
   const { data } = props
@@ -22,6 +23,11 @@ const MainNavigation = props => {
           {category.name}
         </NavLink>
       ))}
+      <Icon>
+        <NavLink to="/shop">
+          <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/bag/image_large.svg" alt="" />
+        </NavLink>
+      </Icon>
     </NavigationContainer>
   )
 }

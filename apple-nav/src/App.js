@@ -4,24 +4,30 @@ import { Route } from 'react-router-dom'
 import AppContainer from './components/StyleComponents/AppStyles'
 import Header from './components/Header'
 import Home from './components/Home'
+import Shop from './components/Shop'
 import SubNavigation from './components/SubNavigation'
 
-import menuData from './data'
+import { menu, shop } from './data'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      data: []
+      data: [],
+      shopData: [],
+      supportData: []
     }
   }
 
   componentDidMount() {
-    this.setState({data: menuData})
+    this.setState({
+      data: menu,
+      shopData: shop
+    })
   }
 
   render() {
-    const { data } = this.state
+    const { data, shopData } = this.state
     return (
       <AppContainer>
         <Header data={data} />
@@ -31,7 +37,10 @@ class App extends Component {
             render={props => <SubNavigation {...props} category={category} />}
           />
         ))}
-        
+        <Route 
+          path="/shop"
+          render={props => <Shop {...props} category={shopData[0]} />} 
+        />
       </AppContainer>
     )
   }
