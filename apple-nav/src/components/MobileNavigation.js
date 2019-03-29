@@ -2,9 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { MobileNavigationContainer, ProductMenuMobile } from './NavigationStyles'
-// import Logo from './StyleComponents/Logo'
-// import SearchIcon from './StyleComponents/SearchIcon'
-// import ShopIcon from './StyleComponents/ShopIcon'
 
 const MobileNavigation = props => {
   const { data } = props

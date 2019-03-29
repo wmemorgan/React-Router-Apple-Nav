@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { flex, breakpoints } from './theme'
 
-const Icon = styled.div`
+export const SearchIcon = styled.div`
     font-family: ${props => props.theme.fontStyles.logoFont};
     font-size: ${props => props.theme.fontSizing.l};
     font-weight: bold;
@@ -21,4 +21,4 @@ const Icon = styled.div`
     
 `
 
-export default Icon
+export default SearchIcon

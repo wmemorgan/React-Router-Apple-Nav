@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { color, colorScheme, fontSizing, flex, breakpoints } from './StyleComponents/theme'
 
 export const NavigationContainer = styled.nav`
-  width: 90%;
+  width: 100%;
   max-width: 1000px;
   ${flex('row', 'center', 'space-evenly')};
   font-size: ${fontSizing.s};

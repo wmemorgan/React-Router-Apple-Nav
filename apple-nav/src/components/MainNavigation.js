@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import { NavigationContainer, ProductMenu }from './NavigationStyles'
 import Logo from './StyleComponents/Logo'
-import SearchIcon from './StyleComponents/SearchIcon'
+import { SearchIcon } from './StyleComponents/SearchStyles'
 import ShopIcon from './StyleComponents/ShopIcon'
 import MobileMenuIcon from './StyleComponents/MobileMenuIcon'
 
