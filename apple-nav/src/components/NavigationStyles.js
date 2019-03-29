@@ -15,15 +15,20 @@ const NavigationContainer = styled.nav`
 
 export const SubNavigationContainer = styled.nav`
   width: 100%;
-  ${flex('row', 'center', 'space-evenly')};
-  padding: 10px;
+  ${flex('column','center','center')}
+  padding: 20px;
   background: ${color.primaryBgShading};
   font-size: ${fontSizing.s};
- 
+`
+
+export const MenuContainer = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  ${flex('row', 'center', 'space-evenly')};
+
   @media ${breakpoints[0]} {
     ${flex('column', 'center', 'center')}
   }
-  
 `
 
 export const MenuOption = styled.div`

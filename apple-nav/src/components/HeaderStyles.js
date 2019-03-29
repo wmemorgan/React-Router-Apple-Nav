@@ -3,7 +3,6 @@ import { colorScheme, flex } from './StyleComponents/theme'
 
 const HeaderContainer = styled.header`
   width: 100%;
-  max-width: 1200px;
   ${flex('row','center','space-evenly')}
   padding: 10px;
   background: ${colorScheme.headerBgColor};
