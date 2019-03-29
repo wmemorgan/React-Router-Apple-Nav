@@ -1,16 +1,31 @@
 import styled from 'styled-components'
-import { color, fontSizing, flex, breakpoints } from './StyleComponents/theme'
+import { color, colorScheme, fontSizing, flex, breakpoints } from './StyleComponents/theme'
 
-const NavigationContainer = styled.nav`
+export const NavigationContainer = styled.nav`
+border: 1px solid green;
   width: 90%;
   max-width: 1000px;
-  ${flex('row', 'center', 'space-between')};
+  ${flex('row', 'center', 'space-evenly')};
   font-size: ${fontSizing.s};
 
-  @media ${breakpoints[0]} {
+  @media ${breakpoints[1]} {
     ${flex('column','center','center')}
   }
 
+`
+
+export const ProductMenu = styled.div`
+  width: 70%;
+  ${flex('row', 'center', 'space-between')};
+
+    @media ${breakpoints[1]} {
+      ${flex('column', 'normal', 'center')}
+
+      a {
+        padding: 10px;
+        border: 1px solid ${colorScheme.defaultBorderColor};
+      }
+  }
 `
 
 export const SubNavigationContainer = styled.nav`

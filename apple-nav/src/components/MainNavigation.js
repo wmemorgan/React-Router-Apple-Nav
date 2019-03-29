@@ -1,9 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import NavigationContainer from './NavigationStyles'
+import { NavigationContainer, ProductMenu }from './NavigationStyles'
 import Logo from './StyleComponents/Logo'
-import Icon from './StyleComponents/Icon'
+import SearchIcon from './StyleComponents/SearchIcon'
+import ShopIcon from './StyleComponents/ShopIcon'
 
 const MainNavigation = props => {
   const { data } = props
@@ -14,25 +15,27 @@ const MainNavigation = props => {
           <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/apple/image_large.svg" alt="Apple Logo" />
         </NavLink>
       </Logo>
-      {data.map(category => (
-        <NavLink 
-          key={category.name} 
-          to={category.path}
-          activeClassName="activeSelection"
-        >
-          {category.name}
-        </NavLink>
-      ))}
-      <Icon>
+      <ProductMenu>
+        {data.map(category => (
+          <NavLink 
+            key={category.name} 
+            to={category.path}
+            activeClassName="activeSelection"
+          >
+            {category.name}
+          </NavLink>
+        ))}
+      </ProductMenu>
+      <SearchIcon>
         <NavLink to="/search">
           <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg" alt="" />
         </NavLink>
-      </Icon>
-      <Icon>
+      </SearchIcon>
+      <ShopIcon>
         <NavLink to="/shop">
           <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/bag/image_large.svg" alt="" />
         </NavLink>
-      </Icon>
+      </ShopIcon>
     </NavigationContainer>
   )
 }
