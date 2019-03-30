@@ -70,7 +70,7 @@ export const SearchFieldContainer = styled.div`
 
 export const SearchFieldContainerMobile = styled.div`
   
-  @media ${breakpoints[1]} {
+  @media ${breakpoints[0]} {
     display: ${props => !props.toggle ? 'none' : 'flex'};
     width: 90%;
     align-items: center;
@@ -84,7 +84,7 @@ export const SearchFieldContainerMobile = styled.div`
     border-radius: 5px;
   }
 
-  @media ${breakpoints[2]} {
+  @media ${breakpoints[1]} {
     display: none;
   }
 
