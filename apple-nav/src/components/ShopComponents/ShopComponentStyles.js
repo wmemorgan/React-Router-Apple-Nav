@@ -2,11 +2,8 @@ import styled, { css } from 'styled-components'
 import { color, colorScheme, fontSizing, flex, breakpoints } from '../StyleComponents/theme'
 
 export const ShopIcon = styled.div`
-  @media ${breakpoints[2]} {
-      display: ${props => !props.toggle ? 'flex' : 'none'};
-      z-index: 10;
-  } 
-
+  display: ${props => !props.toggle ? 'flex' : 'none'};
+  z-index: 2;
   font-family: ${props => props.theme.fontStyles.logoFont};
   font-size: ${props => props.theme.fontSizing.l};
   font-weight: bold;
@@ -22,7 +19,8 @@ export const ShopIcon = styled.div`
     ${flex('column', 'flex-start', 'center')};
   }
 
-  @media ${breakpoints[1]} {
+  @media ${breakpoints[0]} {
+    display: flex;
     order: 1;
     font-size: ${fontSizing.sm};
   }
@@ -48,7 +46,7 @@ export const ShopModalContainer = styled.div`
     font-size: ${fontSizing.s};
   }
 
-  @media ${breakpoints[1]} {
+  @media ${breakpoints[0]} {
     display: none;
   }
 `
