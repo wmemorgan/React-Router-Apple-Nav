@@ -38,25 +38,21 @@ export const SearchIconOff = styled.div`
 `
 
 export const SearchFieldContainer = styled.div`
-  z-index: 20;
+  display: ${props => !props.toggle ? 'none' : 'flex'};
+  width: 70%;
+  height: 40px;
   margin: 0;
-  @media ${breakpoints[2]} {
-    display: ${props => !props.toggle ? 'none' : 'flex'};
-    width: 70%;
-    height: 40px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-    color: ${colorScheme.defaultFontColor};
-    background: ${color.primaryColor};
-    font-family: ${fontStyles.defaultFont};
-    border-radius: 5px;
-  }
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  z-index: 20;
+  color: ${colorScheme.defaultFontColor};
+  background: ${color.primaryColor};
+  font-family: ${fontStyles.defaultFont};
+  border-radius: 5px;
 
-  @media ${breakpoints[1]} {
+  @media ${breakpoints[0]} {
     display: none;
-    margin-top: 100px;
-    padding: 2px 15px;
   }
 
   input {
