@@ -27,19 +27,13 @@ export const SearchIcon = styled.div`
 `
 
 export const SearchIconOff = styled.div`
-     
+    display: flex;
+    flex-drection: column;
+    align-items: 'center';
+    justify-content: 'flex-end'; 
     font-family: ${props => props.theme.fontStyles.logoFont};
     font-size: ${props => props.theme.fontSizing.l};
     font-weight: bold;
-   
-    ${props => 
-      props.toggle &&
-      css`
-          display: flex;
-          flex-drection: column;
-          align-items: 'center';
-          justify-content: 'flex-start'; 
-    `}
 
 `
 
@@ -69,7 +63,7 @@ export const SearchFieldContainer = styled.div`
     width: 100%;
     height: 40px;
     background: ${color.primaryColor};
-    padding: 10px 5px;
+    padding: 10px;
     border-radius: 10px;
     font-family: ${fontStyles.defaultFont};
     font-size: ${fontSizing.sm};
