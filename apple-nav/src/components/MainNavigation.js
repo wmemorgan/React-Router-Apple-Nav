@@ -4,16 +4,16 @@ import { NavLink } from 'react-router-dom'
 
 import { NavigationContainer, ProductMenu }from './NavigationStyles'
 import Logo from './StyleComponents/Logo'
-import { SearchIcon } from './StyleComponents/SearchStyles'
-import ShopIcon from './StyleComponents/ShopIcon'
+import { SearchIcon } from './SearchComponents/SearchStyles'
+import SearchBar from './SearchComponents/SearchBar'
+import { ShopIcon } from './ShopComponents/ShopComponentStyles'
 import MobileMenuIcon from './StyleComponents/MobileMenuIcon'
-import SearchBar from './StyleComponents/SearchBar'
 
 import CloseIcon from './StyleComponents/CloseIcon'
 import CloseIconMobile from './StyleComponents/CloseIconMobile'
 
 const MainNavigation = props => {
-  const { data, toggleDisplay, toggleModal } = props
+  const { data, toggleDisplay, toggleModal, toggleShopModal } = props
 
   return (
     <NavigationContainer>
@@ -58,10 +58,8 @@ const MainNavigation = props => {
         
       </SearchIcon>
       
-      <ShopIcon {...props}>
-        <NavLink to="/shop">
-          <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/bag/image_large.svg" alt="" />
-        </NavLink>
+      <ShopIcon {...props} onClick={toggleShopModal}>
+        <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/bag/image_large.svg" alt="" />
       </ShopIcon>
 
       <CloseIcon 

@@ -3,7 +3,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { MobileNavigationContainer, ProductMenuMobile } from './NavigationStyles'
-import SearchBarMobile from './StyleComponents/SearchBarMobile'
+import SearchBarMobile from './SearchComponents/SearchBarMobile'
 
 const MobileNavigation = props => {
   const { data } = props

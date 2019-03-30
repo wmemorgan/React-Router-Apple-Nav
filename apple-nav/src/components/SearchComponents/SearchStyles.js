@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { color, colorScheme, fontSizing, fontStyles, flex, breakpoints } from './theme'
+import { color, colorScheme, fontSizing, fontStyles, flex, breakpoints } from '../StyleComponents/theme'
 
 export const SearchIcon = styled.div`
     display: flex;

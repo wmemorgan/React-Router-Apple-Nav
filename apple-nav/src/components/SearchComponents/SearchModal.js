@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { SearchModalContainer } from '../StyleComponents/SearchStyles'
+import { SearchModalContainer } from '../SearchComponents/SearchStyles'
 
 const SearchModal = props => {
   const { searchData } = props

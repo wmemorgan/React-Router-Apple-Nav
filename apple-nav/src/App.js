@@ -4,9 +4,9 @@ import { Route } from 'react-router-dom'
 import AppContainer from './components/StyleComponents/AppStyles'
 import Header from './components/Header'
 import Home from './components/Home'
-import Shop from './components/Shop'
-import Search from './components/Search'
-import SearchModal from './components/SearchComponents/SearchModal'
+import Search from './components/SearchComponents/Search'
+import Shop from './components/ShopComponents/Shop'
+
 import SubNavigation from './components/SubNavigation'
 
 
@@ -21,7 +21,8 @@ class App extends Component {
       searchData: search,
       supportData: [],
       toggle: false,
-      show: false
+      show: false,
+      shop: false
     }
   }
 
@@ -31,7 +32,8 @@ class App extends Component {
       shopData: shop,
       searchData: search,
       toggle: false,
-      show: false
+      show: false,
+      shop: false
     })
   }
 
@@ -53,20 +55,29 @@ class App extends Component {
     this.toggleDisplay()
   }
 
+  toggleShopModal = () => {
+    console.log(`clicked on toggleModal!`)
+
+    this.setState(prevState => (
+      { shop: !prevState.shop }
+    ))
+
+    // this.toggleDisplay()
+  }
+
   render() {
     const { data, shopData, searchData } = this.state
 
     return (
       <AppContainer>
         <Header 
-          data={data} 
-          toggle={this.state.toggle}
+          {...this.state}
           toggleDisplay={this.toggleDisplay}
-          searchData={this.state.searchData}
-          show={this.state.show}
           toggleModal={this.toggleModal}
+          toggleShopModal={this.toggleShopModal}
         />
-        <SearchModal {...this.state} />
+        
+        
         {/* Define routes */}
         <Route exact path="/" component={Home}/>
         {/* Define routes to menu items */}
