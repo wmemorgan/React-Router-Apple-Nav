@@ -8,11 +8,12 @@ import { SearchIcon } from './StyleComponents/SearchStyles'
 import ShopIcon from './StyleComponents/ShopIcon'
 import MobileMenuIcon from './StyleComponents/MobileMenuIcon'
 import SearchBar from './StyleComponents/SearchBar'
+import SearchModal from './SearchComponents/SearchModal'
 import CloseIcon from './StyleComponents/CloseIcon'
 import CloseIconMobile from './StyleComponents/CloseIconMobile'
 
 const MainNavigation = props => {
-  const { data, toggleDisplay } = props
+  const { data, toggleDisplay, toggleModal } = props
 
   return (
     <NavigationContainer>
@@ -47,15 +48,15 @@ const MainNavigation = props => {
           </NavLink>
         ))}
       </ProductMenu>
-
+      <SearchModal {...props}/>
       <SearchBar {...props} />      
       <SearchIcon
         {...props}
-        onClick={toggleDisplay}
+        onClick={toggleModal}
       >
-        <NavLink to="/search">
-          <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg" alt="" />
-        </NavLink>
+        
+        <img src="https://www.apple.com/ac/globalnav/4/en_US/images/globalnav/search/image_large.svg" alt="" />
+        
       </SearchIcon>
       
       <ShopIcon {...props}>

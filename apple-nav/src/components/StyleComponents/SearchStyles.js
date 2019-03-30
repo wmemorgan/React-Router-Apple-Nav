@@ -6,6 +6,8 @@ export const SearchIcon = styled.div`
     font-family: ${props => props.theme.fontStyles.logoFont};
     font-size: ${props => props.theme.fontSizing.l};
     font-weight: bold;
+    cursor: pointer;
+
     ${props => 
       props.toggle &&
       css`
@@ -102,6 +104,26 @@ export const SearchFieldContainerMobile = styled.div`
     font-size: ${fontSizing.sm};
     font-weight: normal;
     border: none;
+  }
+`
+
+export const SearchModalContainer = styled.div`
+
+  display: ${props => !props.show ? 'none' : 'block'}
+  max-width: 600px;
+  margin: 200px auto;
+  padding: 20px;
+
+
+  & * {
+    margin: 5px 0;
+    text-decoration: none;
+    color: ${colorScheme.defaultFontColor};
+    font-size: ${fontSizing.s};
+  }
+
+  @media ${breakpoints[1]} {
+    display: none;
   }
 `
 

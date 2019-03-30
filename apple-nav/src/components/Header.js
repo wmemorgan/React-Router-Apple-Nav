@@ -5,18 +5,12 @@ import MainNavigation from './MainNavigation'
 import MobileNavigation from './MobileNavigation'
 
 const Header = props => {
-  const { data, toggleDisplay, toggle } = props
   return (
     <HeaderContainer>
-      <MainNavigation 
-        data={data} 
-        toggleDisplay={toggleDisplay}
-        toggle={toggle}
+      <MainNavigation {...props}
       />
       <MobileNavigation 
-        data={data} 
-        toggleDisplay={toggleDisplay}
-        toggle={toggle}
+      {...props}
       />
     </HeaderContainer>
   )

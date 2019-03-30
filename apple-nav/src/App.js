@@ -15,11 +15,12 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      data: [],
-      shopData: [],
-      searchData: [],
+      data: menu,
+      shopData: shop,
+      searchData: search,
       supportData: [],
-      toggle: false
+      toggle: false,
+      show: false
     }
   }
 
@@ -28,7 +29,8 @@ class App extends Component {
       data: menu,
       shopData: shop,
       searchData: search,
-      toggle: false
+      toggle: false,
+      show: false
     })
   }
 
@@ -40,6 +42,16 @@ class App extends Component {
     ))
   }
 
+  toggleModal = () => {
+    console.log(`clicked on toggleModal!`)
+
+    this.setState(prevState => (
+      { show: !prevState.show }
+    ))
+
+    this.toggleDisplay()
+  }
+
   render() {
     const { data, shopData, searchData } = this.state
 
@@ -49,6 +61,9 @@ class App extends Component {
           data={data} 
           toggle={this.state.toggle}
           toggleDisplay={this.toggleDisplay}
+          searchData={this.state.searchData}
+          show={this.state.show}
+          toggleModal={this.toggleModal}
         />
         {/* Define routes */}
         <Route exact path="/" component={Home}/>
