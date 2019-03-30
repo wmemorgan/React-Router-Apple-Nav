@@ -7,6 +7,12 @@ export const NavigationContainer = styled.nav`
   ${flex('row', 'center', 'space-evenly')};
   font-size: ${fontSizing.s};
 
+  @media ${breakpoints[0]} {
+    ${flex('row','center','space-between')}
+    width: 97%;
+    
+  }
+
 `
 
 export const ProductMenu = styled.div`
@@ -15,7 +21,7 @@ export const ProductMenu = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media ${breakpoints[0]} {
+  @media ${breakpoints[1]} {
       display: none;
   }
 `
@@ -23,8 +29,9 @@ export const ProductMenu = styled.div`
 export const MobileNavigationContainer = styled.nav`
   display: none;
 
-  @media ${breakpoints[0]} {
+  @media ${breakpoints[1]} {
     width: 100%;
+    
     display: ${props => props.show ? 'none' : 'flex'};
     flex-direction: column;
     align-items: center;
@@ -32,14 +39,15 @@ export const MobileNavigationContainer = styled.nav`
     margin-top: 200px;
     position: fixed;
     z-index: 5;
+    
     font-size: ${fontSizing.sm};
     background: #000000;
-  }
+}
 `
 
 export const ProductMenuMobile = styled.div`
 
-    @media ${breakpoints[0]} {
+    @media ${breakpoints[1]} {
       width: 70%;
       display: ${props => !props.toggle ? 'none': 'flex'};
       flex-direction: column;
