@@ -21,7 +21,7 @@ export const ProductMenu = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media ${breakpoints[1]} {
+  @media ${breakpoints[0]} {
       display: none;
   }
 `
@@ -29,7 +29,7 @@ export const ProductMenu = styled.div`
 export const MobileNavigationContainer = styled.nav`
   display: none;
 
-  @media ${breakpoints[1]} {
+  @media ${breakpoints[0]} {
     width: 100%;
     display: ${props => props.show ? 'none' : 'flex'};
     flex-direction: column;
@@ -45,7 +45,7 @@ export const MobileNavigationContainer = styled.nav`
 
 export const ProductMenuMobile = styled.div`
 
-    @media ${breakpoints[1]} {
+    @media ${breakpoints[0]} {
       width: 70%;
       display: ${props => !props.toggle ? 'none': 'flex'};
       flex-direction: column;

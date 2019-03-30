@@ -21,7 +21,7 @@ export const SearchIcon = styled.div`
       ${flex('column', 'flex-end', 'center')};
     }
 
-    @media ${breakpoints[1]} {
+    @media ${breakpoints[0]} {
       display: none;
     }
 `
