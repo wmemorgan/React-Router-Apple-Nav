@@ -3,7 +3,7 @@ import { flex, breakpoints } from './theme'
 
 const MobileMenuIcon = styled.div`
   display: none;
-  @media ${breakpoints[1]}  {
+  @media ${breakpoints[0]}  {
     display: ${props => props.toggle ? 'none' : 'inline-block'};
     z-index: 10;
     font-family: ${props => props.theme.fontStyles.logoFont};

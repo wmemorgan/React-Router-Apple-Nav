@@ -3,7 +3,7 @@ import { flex, breakpoints } from './theme'
 
 const CloseIconMobile = styled.div`
     display: none;
-    @media ${breakpoints[1]} {
+    @media ${breakpoints[0]} {
       z-index: 10;
       display: ${props => !props.toggle ? 'none' : 'inline-block'};
       font-family: ${props => props.theme.fontStyles.logoFont};
