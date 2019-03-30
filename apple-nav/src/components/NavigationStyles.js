@@ -31,7 +31,6 @@ export const MobileNavigationContainer = styled.nav`
 
   @media ${breakpoints[1]} {
     width: 100%;
-    
     display: ${props => props.show ? 'none' : 'flex'};
     flex-direction: column;
     align-items: center;
@@ -39,7 +38,6 @@ export const MobileNavigationContainer = styled.nav`
     margin-top: 200px;
     position: fixed;
     z-index: 5;
-    
     font-size: ${fontSizing.sm};
     background: #000000;
 }

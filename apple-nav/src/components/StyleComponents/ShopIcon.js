@@ -2,28 +2,29 @@ import styled, { css } from 'styled-components'
 import { fontSizing, flex, breakpoints } from './theme'
 
 const ShopIcon = styled.div`
-@media ${breakpoints[2]} {
-    display: ${props => !props.toggle ? 'flex' : 'none'};
-    z-index: 10;
-} 
+  @media ${breakpoints[2]} {
+      display: ${props => !props.toggle ? 'flex' : 'none'};
+      z-index: 10;
+  } 
 
-    font-family: ${props => props.theme.fontStyles.logoFont};
-    font-size: ${props => props.theme.fontSizing.l};
-    font-weight: bold;
-    ${props => 
-      props.main &&
-      css`
-        text-align: center;
-    `}
+  font-family: ${props => props.theme.fontStyles.logoFont};
+  font-size: ${props => props.theme.fontSizing.l};
+  font-weight: bold;
 
-    a {
-      ${flex('column', 'flex-end', 'center')};
-    }
+  ${props => 
+    props.main &&
+    css`
+      text-align: center;
+  `}
 
-    @media ${breakpoints[1]} {
-      order: 1;
-      font-size: ${fontSizing.sm};
-    }
+  a {
+    ${flex('column', 'flex-start', 'center')};
+  }
+
+  @media ${breakpoints[1]} {
+    order: 1;
+    font-size: ${fontSizing.sm};
+  }
 
 
 `
