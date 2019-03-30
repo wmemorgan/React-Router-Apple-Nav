@@ -103,24 +103,24 @@ export const SearchFieldContainerMobile = styled.div`
 export const SearchModalContainer = styled.div`
   display: ${props => !props.show ? 'none' : 'block'}
   top: 65px;
-  left: 30%;
+  left: 20%;
   position: fixed;
   overflow: hidden;
   z-index: 20;
-  width: 300px;
+  width: 60%;
   margin: 0 auto;
   padding: 10px;
   background: ${color.lightText};
 
   & * {
-    margin: 5px 0;
+    margin: 20px 0;
     text-decoration: none;
     list-style-type:none
     color: ${colorScheme.defaultFontColor};
     font-size: ${fontSizing.s};
   }
 
-  @media ${breakpoints[1]} {
+  @media ${breakpoints[0]} {
     display: none;
   }
 `

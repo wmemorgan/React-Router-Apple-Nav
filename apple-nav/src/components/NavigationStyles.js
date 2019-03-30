@@ -7,12 +7,6 @@ export const NavigationContainer = styled.nav`
   ${flex('row', 'center', 'space-evenly')};
   font-size: ${fontSizing.s};
 
-  @media ${breakpoints[1]} {
-    ${flex('row','center','space-between')}
-    width: 97%;
-    
-  }
-
 `
 
 export const ProductMenu = styled.div`
