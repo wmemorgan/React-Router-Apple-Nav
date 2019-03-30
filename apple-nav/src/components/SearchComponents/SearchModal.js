@@ -6,7 +6,7 @@ import { SearchModalContainer } from '../StyleComponents/SearchStyles'
 const SearchModal = props => {
   const { searchData } = props
   return (
-    <SearchModalContainer>
+    <SearchModalContainer {...props}>
       <h2>Quick Links</h2>
       <ul>
         {searchData[0].subMenu.map(item => (

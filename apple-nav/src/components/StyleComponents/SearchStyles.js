@@ -110,14 +110,21 @@ export const SearchFieldContainerMobile = styled.div`
 export const SearchModalContainer = styled.div`
 
   display: ${props => !props.show ? 'none' : 'block'}
-  max-width: 600px;
-  margin: 200px auto;
-  padding: 20px;
-
+  top: 80px;
+  left: 30%;
+  position: fixed;
+  overflow: hidden;
+  z-index: 20;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background: ${color.lightText};
+  
 
   & * {
     margin: 5px 0;
     text-decoration: none;
+    list-style-type:none
     color: ${colorScheme.defaultFontColor};
     font-size: ${fontSizing.s};
   }

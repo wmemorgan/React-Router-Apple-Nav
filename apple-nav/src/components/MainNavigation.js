@@ -8,7 +8,7 @@ import { SearchIcon } from './StyleComponents/SearchStyles'
 import ShopIcon from './StyleComponents/ShopIcon'
 import MobileMenuIcon from './StyleComponents/MobileMenuIcon'
 import SearchBar from './StyleComponents/SearchBar'
-import SearchModal from './SearchComponents/SearchModal'
+
 import CloseIcon from './StyleComponents/CloseIcon'
 import CloseIconMobile from './StyleComponents/CloseIconMobile'
 
@@ -48,7 +48,6 @@ const MainNavigation = props => {
           </NavLink>
         ))}
       </ProductMenu>
-      <SearchModal {...props}/>
       <SearchBar {...props} />      
       <SearchIcon
         {...props}
@@ -67,7 +66,7 @@ const MainNavigation = props => {
 
       <CloseIcon 
         {...props}
-        onClick={toggleDisplay} 
+        onClick={toggleModal} 
       >
         <i className="fa fa-times" aria-hidden="true"></i>
       </CloseIcon>

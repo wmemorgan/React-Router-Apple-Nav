@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Shop from './components/Shop'
 import Search from './components/Search'
+import SearchModal from './components/SearchComponents/SearchModal'
 import SubNavigation from './components/SubNavigation'
 
 
@@ -65,6 +66,7 @@ class App extends Component {
           show={this.state.show}
           toggleModal={this.toggleModal}
         />
+        <SearchModal {...this.state} />
         {/* Define routes */}
         <Route exact path="/" component={Home}/>
         {/* Define routes to menu items */}
