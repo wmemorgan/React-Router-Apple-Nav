@@ -40,7 +40,7 @@ export const MobileNavigationContainer = styled.nav`
     z-index: 5;
     font-size: ${fontSizing.sm};
     background: #000000;
-}
+  }
 `
 
 export const ProductMenuMobile = styled.div`

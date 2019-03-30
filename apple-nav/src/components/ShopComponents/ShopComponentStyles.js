@@ -27,27 +27,53 @@ export const ShopIcon = styled.div`
 `
 
 export const ShopModalContainer = styled.div`
-  display: ${props => !props.shop ? 'none' : 'block'}
-  top: 65px;
-  right: 50px;
+  display: ${props => !props.shop ? 'none' : 'flex'}
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  overflow: hidden;
-  z-index: 20;
-  width: 200px;
-  margin: 0 auto;
-  padding: 5px;
+  top: 65px;
+  right: 10px;
+  z-index: 3;
+  width: 25%;
+ 
   background: ${color.lightText};
+  overflow: hidden;
 
   & * {
-    margin: 5px 0;
     text-decoration: none;
     list-style-type:none
-    color: ${colorScheme.defaultFontColor};
+    color: dodgerblue;
     font-size: ${fontSizing.s};
   }
 
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      margin-top: 50px;
+      margin-bottom: 20px;
+
+      li {
+          width: 70%;
+          padding: 10px;
+          border-top: 1px solid ${colorScheme.defaultBorderColor};
+      }
+ 
+    }
+
   @media ${breakpoints[0]} {
-    display: none;
+    width: 100%;
+    display: ${props => !props.shop ? 'none' : 'flex'};
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    
   }
 `
 
