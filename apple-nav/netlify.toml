@@ -1,0 +1,7 @@
+# Netlify deployment configuration settings
+
+[build]
+  base = "/apple-nav"
+  command = "yarn build"
+  publish = "/apple-nav/build/"
+
