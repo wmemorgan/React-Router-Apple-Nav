@@ -77,15 +77,10 @@ export const SearchFieldContainerMobile = styled.div`
     justify-content: space-between;
     margin-top: 100px;
     padding: 2px 15px;
-    
     color: ${colorScheme.defaultFontColor};
     background: ${color.primaryColor};
     font-family: ${fontStyles.defaultFont};
     border-radius: 5px;
-  }
-
-  @media ${breakpoints[1]} {
-    display: none;
   }
 
   input {
